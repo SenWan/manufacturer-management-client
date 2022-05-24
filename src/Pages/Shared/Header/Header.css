@@ -1,3 +1,8 @@
 .fullnav{
     background-color: #000F38;
 }
+
+.menu:hover{
+    background-color: rgb(176, 176, 243);
+    border-radius: 2px;
+}
