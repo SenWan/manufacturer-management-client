@@ -1,8 +1,11 @@
 import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Button, Form} from 'react-bootstrap';
+import { toast, ToastContainer } from 'react-toastify';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const emailRef = useRef('');
@@ -11,6 +14,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   let from = location.state?.from?.pathname || '/';
+  let fixerror;
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -26,9 +30,31 @@ const Login = () => {
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   if(user){
     navigate(from, {replace: true})
+  }
+
+  if(error){
+    fixerror = (
+      <p className='text-danger'>Error: {error?.message}</p>
+    )
+  }
+
+  if(loading || sending){
+    return <Loading></Loading>
+  }
+
+  const resetPassword = async() => {
+    const email = emailRef.current.value;
+    if(email){
+      await sendPasswordResetEmail(email);
+      toast('send email')
+    }
+    else{
+      toast('please enter your email')
+    }
   }
 
   const navigateRegister = event => {
@@ -48,9 +74,11 @@ const Login = () => {
           <Button variant="info text-white w-50 mx-auto d-block mb-2" type="submit">
             Login
           </Button>
+          {fixerror}
         </Form>
         <p>Are you new user? <Link to='/register'  style={{cursor:'pointer'}} className='text-primary text-decoration-none' onClick={navigateRegister}> Please Register !</Link></p>
-        <p>forget password? <span  style={{cursor:'pointer'}} className='text-primary'> Reset Password !</span></p>
+        <p>forget password? <span  style={{cursor:'pointer'}} className='text-primary' onClick={resetPassword}> Reset Password !</span></p>
+        <ToastContainer></ToastContainer>
       </div>
     );
 };
