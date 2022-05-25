@@ -1,0 +1,102 @@
+[
+    {
+        "_id": 2,
+        "name": "Processor core i7 5th Ganeration",
+        "description": "Get it now the latest technology",
+        "price": 10000,
+        "quantity": 100,
+        "minimum_order": 2,
+        "available_quantity": 100,
+        "img": "img2.jpg"
+    },
+    {
+        "_id": 3,
+        "name": "Gigabyte graphics card",
+        "description": "gaming special",
+        "price": 60000,
+        "quantity": 100,
+        "minimum_order": 5,
+        "available_quantity": 100,
+        "img": "img3.jpg"
+    },
+    {
+        "_id": 4,
+        "name": "SSD 120GB",
+        "description": "secure and fast",
+        "price": 6000,
+        "quantity": 1000,
+        "minimum_order": 5,
+        "available_quantity": 100,
+        "img": "img4.jpg"
+    },
+    {
+        "_id": 5,
+        "name": "Processor core i5 5th Ganeration",
+        "description": "Get it now the latest technology",
+        "price": 8000,
+        "quantity": 100,
+        "minimum_order": 2,
+        "available_quantity": 100,
+        "img": "img5.jpg"
+    },
+    {
+        "_id": 6,
+        "name": "Processor core i7 10th Ganeration",
+        "description": "Get it now the latest technology",
+        "price": 12000,
+        "quantity": 100,
+        "minimum_order": 2,
+        "available_quantity": 100,
+        "img": "img6.jpg"
+    },
+    {
+        "_id": 7,
+        "name": "Processor core i7 11th Ganeration",
+        "description": "Get it now the latest technology",
+        "price": 15000,
+        "quantity": 100,
+        "minimum_order": 2,
+        "available_quantity": 100,
+        "img": "img7.jpg"
+    },
+    {
+        "_id": 8,
+        "name": "Graphics Card",
+        "description": "High quality graphics card gaming special",
+        "price": 12200,
+        "quantity": 200,
+        "minimum_order": 10,
+        "available_quantity": 100,
+        "img": "img8.jpg"
+    },
+    {
+        "_id": 11,
+        "name": "Gaming Mouse",
+        "description": "Best choice for gamer",
+        "price": 450,
+        "quantity": 650,
+        "minimum_order": 10,
+        "available_quantity": 2000,
+        "img": "img11.jpg"
+    },
+    {
+        "_id": 12,
+        "name": "Mouse",
+        "description": "High resolution apple monitor",
+        "price": 120,
+        "quantity": 550,
+        "minimum_order": 10,
+        "available_quantity": 2000,
+        "img": "img12.jpg"
+    },
+    {
+        "_id": 13,
+        "name": "Laptop Keyboard",
+        "description": "Adorable keyboard, 1 year warranty",
+        "price": 1200,
+        "quantity": 250,
+        "minimum_order": 2,
+        "available_quantity": 120,
+        "img": "img13.jpg"
+    }
+]
