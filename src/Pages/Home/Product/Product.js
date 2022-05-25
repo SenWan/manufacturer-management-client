@@ -1,9 +1,10 @@
 import React from 'react';
+import './Product.css'
 
 const Product = ({product}) => {
     const {name, img, description, quantity, price, minimum_order, available_quantity} = product;
     return (
-        <div className='inventory'>
+        <div className='tools'>
             <img className='w-100 image' src={img} alt="" />
             <div className='details'>
                 <h4>Name: {name}</h4>
