@@ -1,0 +1,70 @@
+.contactus {
+    background: #f9f9f9;
+}
+.outer-box {
+    width: 85%;
+    margin: 0 auto;
+}
+.contact-us ul {
+    padding: 0;
+}
+.contact-us li {
+    color: #333;
+    margin-bottom: 25px;
+  display:block;
+}
+.contact-us li .box {
+    background: #fff;
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.12);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 4px;
+    color: #666;
+    font-weight: 600;
+}
+.contact-us .lnr {
+    display: block;
+    font-size: 30px;
+    margin: 0 0 10px 0;
+    color: #af0433;
+}
+.form-box {
+    padding: 35px 20px;
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.12);
+    background: #fff;
+    border-radius: 4px;
+}
+.contact-us input,
+.contact-us textarea {
+    background: none;
+    border: 1px solid #dadada;
+    box-shadow: none;
+    height: 40px;
+    color: #333;
+}
+.contact-us textarea {
+    height: 150px;
+}
+.contact-us .btn-submit {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+}
+.contact-us .btn-submit:hover {
+    background: #333;
+    color: #fff;
+}
+
+a.btn {
+
+    border: 1px solid #af0433;
+    color: #fff;
+    background: #af0433;
+    padding: 12px 20px;
+}
+
+a.btn:hover{
+    border: 1px solid #af0433;
+    color: #af0433;
+    background: transparent;
+}
