@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile} from 'react-fireba
 import './Register.css'
 import Loading from '../../../Shared/Loading/Loading';
 import SocialLogin from '../../SocialLogin/SocialLogin';
+import useToken from '../../../../Hooks/useToken';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -16,6 +17,7 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true})
 
     const [updateProfile, updating] = useUpdateProfile(auth);
+    const [token] = useToken(user);
 
       if(loading || updating){
         return  <Loading></Loading>
@@ -29,8 +31,11 @@ const Register = () => {
 
         await createUserWithEmailAndPassWord(email, password);
         await updateProfile({displayName: name});
-        navigate('/home');
+        //navigate('/home');
 
+    }
+    if(token){
+        navigate('/home');
     }
     return (
         <div className='container register-form' style={{height:'60vh'}}>
