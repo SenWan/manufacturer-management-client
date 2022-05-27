@@ -31,7 +31,7 @@ const Register = () => {
 
         await createUserWithEmailAndPassWord(email, password);
         await updateProfile({displayName: name});
-        //navigate('/home');
+        navigate('/home');
 
     }
     if(token){
