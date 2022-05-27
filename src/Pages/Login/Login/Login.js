@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import 'react-toastify/dist/ReactToastify.css';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
   const emailRef = useRef('');
@@ -78,6 +79,7 @@ const Login = () => {
         </Form>
         <p>Are you new user? <Link to='/register'  style={{cursor:'pointer'}} className='text-primary text-decoration-none' onClick={navigateRegister}> Please Register !</Link></p>
         <p>forget password? <span  style={{cursor:'pointer'}} className='text-primary' onClick={resetPassword}> Reset Password !</span></p>
+        <SocialLogin></SocialLogin>
         <ToastContainer></ToastContainer>
       </div>
     );
